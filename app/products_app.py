@@ -1,10 +1,24 @@
 
 import csv
 
+data = list()
+
+file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
+
+with open(file_name,"r") as csv_file:
+    reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
+    for row in reader:
+        data.append(row)
+        print(row["id"], row["name"])
+
+    print("\n")
+
+    row_count = len(data)
+
 print("\n")
 print("Welcome the product app (insert username here)!!!")
 print("\n")
-print("There are X products in the database! Please select an operation:")
+print("There are " + str(row_count) + " products in the database! Please select an operation from the following menu:")
 print("\n")
 print("Operation | Description")
 print("----------  -----------")
@@ -52,7 +66,7 @@ else:
 
 print("\n")
 
-file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
+
 
 
 #with open(file_name, "w") as csv_file:
@@ -61,17 +75,6 @@ file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
 #    writer.writerow({"id": "9999", "name": "test test test"})
 
 
-with open(file_name,"r") as csv_file:
-    reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
-    data = list()
-    for row in reader:
-        data.append(row)
-        print(row["id"], row["name"])
-
-    print("\n")
-
-    row_count = len(data)
-print(row_count)
 
 
 
