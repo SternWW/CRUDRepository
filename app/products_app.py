@@ -63,9 +63,13 @@ file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
 
 with open(file_name,"r") as csv_file:
     reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
+    data = list()
     for row in reader:
+        data.append(row)
         print(row["id"], row["name"])
-    data = list(reader)
+
+    print("\n")
+
     row_count = len(data)
 print(row_count)
 
