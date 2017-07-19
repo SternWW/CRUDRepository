@@ -14,25 +14,40 @@ print("'Create'  | Add a new product.")
 print("'Update'  | Edit an existing product.")
 print("'Destroy' | Delete an existing product.")
 print("\n")
-#function = input("Please input your chosen operation:  ")
+function = input("Please input your chosen operation:  ")
+function = function.title()
 print("\n")
 
 #print("You chose the " + function + " function! Great choice!")
 
+
+
 #Three quotes will give the ability to type a multi-line string into python directly (avoiding having to type all the pring and \n above) done with """
 
-#if function.title() == "List": #using title function in case someone inputs 'list'
-#    print("You chose the " + function + " function! Great choice!")
-#elif function.title() == "Show":
-#    print("You chose the " + function + " function! Great choice!")
-#elif function.title() == "Create":
-#    print("You chose the " + function + " function! Great choice!")
-#elif function.title() == "Update":
-#    print("You chose the " + function + " function! Great choice!")
-#elif function.title() == "Destroy":
-#    print("You chose the " + function + " function! Great choice!")
-#else:
-#    print("YOU HAVE CHOSEN AN Unrecognized Operation. Please choose one of: 'List', 'Show', 'Create', 'Update', or 'Destroy'.")
+def list_products():
+    print("You chose the " + function + " function! Great choice!")
+
+def show_product():
+      print("You chose the " + function + " function! Great choice!")
+def create_product():
+      print("You chose the " + function + " function! Great choice!")
+def update_product():
+      print("You chose the " + function + " function! Great choice!")
+def destroy_product():
+      print("You chose the " + function + " function! Great choice!")
+
+if function == "List": #using title function in case someone inputs 'list'
+    list_products()
+elif function == "Show":
+    show_product()
+elif function == "Create":
+    create_product()
+elif function == "Update":
+    update_product()
+elif function == "Destroy":
+    destroy_product()
+else:
+    print("YOU HAVE CHOSEN AN Unrecognized Operation. Please choose one of: 'List', 'Show', 'Create', 'Update', or 'Destroy'.")
 
 
 print("\n")
@@ -50,3 +65,11 @@ with open(file_name,"r") as csv_file:
     reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
     for row in reader:
         print(row["id"], row["name"])
+    data = list(reader)
+    row_count = len(data)
+print(row_count)
+
+
+
+
+#print(len(p))
