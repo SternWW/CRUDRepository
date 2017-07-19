@@ -38,6 +38,14 @@ print("\n")
 print("\n")
 
 file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
+
+
+#with open(file_name, "w") as csv_file:
+#    writer = csv.DictWriter(csv_file, fieldnames=["id", "name", "aisle", "department","price"])
+#    writer.writeheader() # uses fieldnames set above
+#    writer.writerow({"id": "9999", "name": "test test test"})
+
+
 with open(file_name,"r") as csv_file:
     reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
     for row in reader:
