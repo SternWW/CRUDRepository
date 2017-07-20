@@ -11,6 +11,15 @@ with open(file_name,"r") as csv_file:
         data.append(row)
         print(row["id"], row["name"])
 
+other_file = "/Users/Warren/documents/crudrepository/data/writing_stuff.csv"
+
+with open(other_file, "w") as csv_file2:
+    writer = csv.DictWriter(csv_file2, fieldnames=["id", "name", "aisle", "department","price"])
+    writer.writeheader() # uses fieldnames set above
+    for product in data:
+        writer.writerow(product)
+
+
     print("\n")
 
     row_count = len(data)
@@ -67,12 +76,6 @@ else:
 print("\n")
 
 
-
-
-#with open(file_name, "w") as csv_file:
-#    writer = csv.DictWriter(csv_file, fieldnames=["id", "name", "aisle", "department","price"])
-#    writer.writeheader() # uses fieldnames set above
-#    writer.writerow({"id": "9999", "name": "test test test"})
 
 
 
