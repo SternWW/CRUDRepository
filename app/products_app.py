@@ -5,12 +5,12 @@ data = list()
 
 file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
 
-def read_data(file_name):
-    with open(file_name,"r") as csv_file:
-        reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
-        for row in reader:
-            data.append(row)
-            print(row["id"], row["name"])
+#def read_data(file_name):
+#    with open(file_name,"r") as csv_file:
+#        reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
+#        for row in reader:
+#            data.append(row)
+#            print(row["id"], row["name"])
 
 
 with open(file_name,"r") as csv_file:
@@ -59,7 +59,11 @@ print("\n")
 #Three quotes will give the ability to type a multi-line string into python directly (avoiding having to type all the pring and \n above) done with """
 
 def list_products():
-    read_data(file_name)
+    with open(file_name,"r") as csv_file:
+        reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
+        for row in reader:
+            data.append(row)
+            print(row["id"], row["name"])
 
 def show_product():
       print("You chose the " + function + " function! Great choice!")
