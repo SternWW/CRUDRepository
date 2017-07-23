@@ -138,7 +138,7 @@ else:
 print("\n")
 
 #OVERWRITING INVENTORY CSV FILE
-with open(other_file, "w") as csv_file2:#NEED TO UPDATE FILE NAME TO ORIGINAL FILE FOR CREATE TO WORK
+with open(file_name, "w") as csv_file2:#NEED TO UPDATE FILE NAME TO ORIGINAL FILE FOR CREATE TO WORK
     writer = csv.DictWriter(csv_file2, fieldnames=["id", "name", "aisle", "department","price"])
     writer.writeheader() # uses fieldnames set above
     for product in data:
