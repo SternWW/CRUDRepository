@@ -1,21 +1,21 @@
 # CRUDRepository
-# Name of Your App
+# Python3 CSV CRUD Application
+This app allows you to list, show, update, or destroy products stored in a CSV file.
+This application assumes you have installed Python 3.x and corresponding Pip. It may work, but is untested on Python 2.x.
 
-#Some description or other info about what the app does.
 
 ## Installation
 
-#Download the source code:
+Download the [prepared CSV file](https://raw.githubusercontent.com/prof-rossetti/nyu-info-2335-70-201706/master/projects/crud-app/products.csv) and save it as `data/products.csv`.
 
-#```shell
-#git clone remote_clone_address_of_your_repo_here
-#cd some/path/to/repo/
-#```
-
-#Finally, download the [example `products.csv` file](https://raw.githubusercontent.com/prof-rossetti/nyu-info-2335-70-201706/master/projects/crud-app/products.csv) and save it as `data/products.csv`.
+Download the source code:
+```shell
+git clone git@github.com:sternww/crudrepository.git
+cd crudrepository/
+```
 
 ## Usage
 
-#```shell
-#python app/products_app.py
-#```
+```shell
+python3 app/products_app.py
+```
