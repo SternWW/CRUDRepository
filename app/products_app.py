@@ -37,7 +37,7 @@ print("\n")
 row_count = len(data)
 
 print("\n")
-print("Welcome the product app (insert username here)!!!")
+print("Welcome to the product app @s2t2!")
 print("\n")
 print("There are " + str(row_count) + " products in the database! Please select an operation from the following menu:")
 print("\n")
