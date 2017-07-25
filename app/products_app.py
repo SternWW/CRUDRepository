@@ -3,23 +3,12 @@ import csv
 
 data = []
 
-file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
+file_name = "data/products.csv"
+#file_name = "/Users/Warren/documents/crudrepository/data/products.csv"
 
 headers = ["id", "name", "aisle", "department", "price"]
 user_input_headers = [header for header in headers if header != "id"]
 
-#def get_product_id(product): return int(product["id"])
-
-#def auto_incremented_id():
-#    product_ids = map(get_product_id, data)
-#    return max(product_ids) + 1
-
-#def read_data(file_name):
-#    with open(file_name,"r") as csv_file:
-#        reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
-#        for row in reader:
-#            data.append(row)
-#            print(row["id"], row["name"])
 
 with open(file_name,"r") as csv_file:
     reader = csv.DictReader(csv_file) # assuming your CSV has headers, otherwise... csv.reader(csv_file)
@@ -37,7 +26,7 @@ print("\n")
 row_count = len(data)
 
 print("\n")
-print("Welcome to the product app @s2t2!")
+print("Welcome to the product app @SternWW!")
 print("\n")
 print("There are " + str(row_count) + " products in the database! Please select an operation from the following menu:")
 print("\n")
@@ -79,7 +68,7 @@ def create_product():
     print("Please specify the product's information:")
     product_name = input("    What do you want to name the new product?")
     product_aisle = input("    What aisle is the new product in?")
-    product_department = input("    What department is the new product in??")
+    product_department = input("    What department is the new product in?")
     product_price = input("    What price is the new product?")
     "CREATING YOUR NEW PRODUCT!"
     new_product = {
@@ -143,9 +132,3 @@ with open(file_name, "w") as csv_file2:#NEED TO UPDATE FILE NAME TO ORIGINAL FIL
     writer.writeheader() # uses fieldnames set above
     for product in data:
         writer.writerow(product)
-
-
-
-
-
-#print(len(p))
